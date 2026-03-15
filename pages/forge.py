@@ -50,6 +50,16 @@ if 'transformed_df' in st.session_state and 'ml_task' in st.session_state:
 
     # --- 🔥 IGNITION ---
     if st.button("🔥 Ignite the Forge", type="primary", width='stretch'):
+        st.cache_data.clear()
+        pc.setup(
+            data=st.session_state['transformed_df'], 
+            target=st.session_state['target'], 
+            preprocess=False,  # This stops it from double-cleaning
+            n_jobs=1,          # This stops the RAM-crash
+            html=False, 
+            verbose=False, 
+            session_id=123
+        )
         results = []
         progress_bar = st.progress(0)
         status_text = st.empty()
