@@ -3,4 +3,3 @@ streamlit
 pandas
 pycaret[full]
 ydata-profiling
-scikit-learn
