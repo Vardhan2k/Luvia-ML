@@ -1,5 +1,10 @@
 pandas==3.0.1
 pycaret==3.3.2
 streamlit==1.55.0
+<<<<<<< HEAD
 ydata_profiling==4.18.1
+=======
+streamlit_pandas_profiling
+ydata_profiling
+>>>>>>> fe61d4f262137702fe16faa2142dc7f0aed10f20
 scikit-learn
