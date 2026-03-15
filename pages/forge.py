@@ -75,7 +75,7 @@ if 'transformed_df' in st.session_state and 'ml_task' in st.session_state:
             
             try:
                 # Train using dynamic module
-                model = pc.create_model(m_id, cross_validation=True, verbose=False)
+                model = pc.create_model(m_id, cross_validation=False, verbose=False)
                 score_df = pc.pull()
                 
                 if 'Mean' in score_df.index:
