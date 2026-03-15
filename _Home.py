@@ -13,7 +13,8 @@ if logo_path.exists():
 # 1. Use st.logo to guarantee it sits ABOVE the navigation menu
     st.logo(
         image=str(logo_path), 
-        size = "large"
+        size = "large",
+        link="https://www.linkedin.com/in/srivarsrihari/"
         )
 else:
     st.sidebar.markdown("## :material/scatter_plot: **Luvia ML**")
