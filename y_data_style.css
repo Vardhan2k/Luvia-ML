@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url("./static/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+}
+
+/* Force override bootstrap fonts */
+
+body,
+p,
+div,
+span,
+table,
+thead,
+tbody,
+th,
+td,
+li {
+    font-family: "SpaceGrotesk", sans-serif !important;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "SpaceGrotesk", sans-serif !important;
+}
+
+body {
+    background: transparent !important;
+}
+
+.container-fluid,
+.wrapper,
+.content {
+    background: transparent !important;
+}
+
+.card {
+    background: transparent !important;
+    border: none !important;
+}
