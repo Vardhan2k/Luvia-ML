@@ -5,6 +5,26 @@ import pandas as pd
 import pycaret.classification as pyc_class
 import pycaret.regression as pyc_reg
 
+# --- HIDE STREAMLIT BRANDING & STATUS ---
+st.markdown("""
+    <style>
+        /* Hide the top-right hamburger menu and the footer "Made with Streamlit" */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        
+        /* Hide the "Running..." status indicator at the top right */
+        div[data-testid="stStatusWidget"] {
+            visibility: hidden;
+            display: none;
+        }
+        
+        /* Optional: Removes the top padding to make the UI tighter */
+        .block-container {
+            padding-top: 1rem;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 st.title("🛠️ Step 2: The Refinery")
 
 if st.session_state.get('df') is not None:

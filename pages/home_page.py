@@ -1,5 +1,23 @@
 import streamlit as st
-
+# --- HIDE STREAMLIT BRANDING & STATUS ---
+st.markdown("""
+    <style>
+        /* Hide the top-right hamburger menu and the footer "Made with Streamlit" */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        
+        /* Hide the "Running..." status indicator at the top right */
+        div[data-testid="stStatusWidget"] {
+            visibility: hidden;
+            display: none;
+        }
+        
+        /* Optional: Removes the top padding to make the UI tighter */
+        .block-container {
+            padding-top: 1rem;
+        }
+    </style>
+""", unsafe_allow_html=True)
 # --- HERO SECTION ---
 st.write("## Welcome to Luvia ML")
 st.write("##### Your End-to-End, No-Code Machine Learning Pipeline.")

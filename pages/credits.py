@@ -2,6 +2,26 @@ import streamlit as st
 
 st.set_page_config(page_title="Luvia ML - Credits", page_icon="📜")
 
+# --- HIDE STREAMLIT BRANDING & STATUS ---
+st.markdown("""
+    <style>
+        /* Hide the top-right hamburger menu and the footer "Made with Streamlit" */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        
+        /* Hide the "Running..." status indicator at the top right */
+        div[data-testid="stStatusWidget"] {
+            visibility: hidden;
+            display: none;
+        }
+        
+        /* Optional: Removes the top padding to make the UI tighter */
+        .block-container {
+            padding-top: 1rem;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 st.title("📜 The Librarians")
 st.write("Luvia ML is built upon a foundation of world-class open-source software. I extend my deepest gratitude to the creators and maintainers of these projects.")
 
