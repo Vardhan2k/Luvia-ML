@@ -6,6 +6,26 @@ import pycaret.classification as pyc_class
 import pycaret.regression as pyc_reg
 import os
 
+# --- HIDE STREAMLIT BRANDING & STATUS ---
+st.markdown("""
+    <style>
+        /* Hide the top-right hamburger menu and the footer "Made with Streamlit" */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        
+        /* Hide the "Running..." status indicator at the top right */
+        div[data-testid="stStatusWidget"] {
+            visibility: hidden;
+            display: none;
+        }
+        
+        /* Optional: Removes the top padding to make the UI tighter */
+        .block-container {
+            padding-top: 1rem;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 st.title("🚀 Step 3: The Forge")
 
 if 'transformed_df' in st.session_state and 'ml_task' in st.session_state:
