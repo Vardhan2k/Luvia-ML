@@ -24,6 +24,25 @@ else:
     st.sidebar.markdown("## :material/scatter_plot: **Luvia ML**")
     st.sidebar.caption("Forge your intelligence.")
     
+# --- HIDE STREAMLIT BRANDING & STATUS ---
+st.markdown("""
+    <style>
+        /* Hide the top-right hamburger menu and the footer "Made with Streamlit" */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        
+        /* Hide the "Running..." status indicator at the top right */
+        div[data-testid="stStatusWidget"] {
+            visibility: hidden;
+            display: none;
+        }
+        
+        /* Optional: Removes the top padding to make the UI tighter */
+        .block-container {
+            padding-top: 1rem;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # --- ESCAPE HATCH TO MAIN PORTFOLIO (Themed) ---
 st.sidebar.markdown(
