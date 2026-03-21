@@ -8,8 +8,8 @@ st.markdown("""
         
         /* Hide the "Running..." status indicator at the top right */
         div[data-testid="stStatusWidget"] {
-            visibility: hidden;
-            display: none;
+            visibility: hidden !important;
+            display: none !important;
         }
         
         /* Optional: Removes the top padding to make the UI tighter */
