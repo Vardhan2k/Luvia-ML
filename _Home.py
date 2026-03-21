@@ -1,9 +1,13 @@
 import streamlit as st
 from pathlib import Path
 
+# 1. Find the logo path FIRST (Standard Python, not a Streamlit command)
+current_dir = Path(__file__).parent
+logo_path = current_dir / "static" / "luvia-logo-large.png"
+
 st.set_page_config(
     page_title="Luvia ML", 
-    page_icon="🌌", 
+    page_icon=str(logo_path) if logo_path.exists() else ":material/scatter_plot:", 
     layout="wide")
 
 current_dir = Path(__file__).parent
@@ -20,6 +24,40 @@ else:
     st.sidebar.markdown("## :material/scatter_plot: **Luvia ML**")
     st.sidebar.caption("Forge your intelligence.")
     
+
+# --- ESCAPE HATCH TO MAIN PORTFOLIO (Themed) ---
+st.sidebar.markdown(
+    """
+    <style>
+        .portfolio-back-btn {
+            display: inline-block; /* Keeps it compact, not full width */
+            padding: 0.3rem 0.7rem;
+            background-color: #fafafa; /* Removes the heavy black box */
+            color: #09090b !important; /* Subtle zinc text */
+            border-radius: 8px; /* Smooth pill shape */
+            font-weight: 500;
+            font-size: 0.75rem;
+            border: 1px solid #d3d2ca; /* Subtle border */
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+            margin-bottom: 0.5rem;
+            font-family: 'Geist Mono', monospace; /* Techy vibe */
+        }
+        .portfolio-back-btn:hover {
+            color: #10b981 !important; /* Portfolio Emerald Green */
+            border-color: #10b981;
+            background-color: rgba(16, 185, 129, 0.1); /* Very slight green glow */
+        }
+    </style>
+    
+    <div style="text-align: left; padding-left: 0.5rem;">
+        <a href="https://scriptedbysri.dev" target="_self" class="portfolio-back-btn">
+            ← ScriptedBySri.dev
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # Router only - No text here!
 pg = st.navigation([
