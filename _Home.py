@@ -1,6 +1,18 @@
 import streamlit as st
 from pathlib import Path
 
+
+# Router only - No text here!
+pg = st.navigation([
+    st.Page("pages/home_page.py", title="Home", icon=":material/home:"),
+    st.Page("pages/exploration.py", title="Exploration", icon=":material/analytics:"),
+    st.Page("pages/refinery.py", title="Refinery", icon=":material/architecture:"),
+    st.Page("pages/forge.py", title="Forge", icon=":material/model_training:"),
+    st.Page("pages/predict.py", title="Predict", icon=":material/online_prediction:"),
+    st.Page("pages/credits.py", title="Credits", icon=":material/history_edu:"),
+])
+
+
 # 1. Find the logo path FIRST (Standard Python, not a Streamlit command)
 current_dir = Path(__file__).parent
 logo_path = current_dir / "static" / "luvia-logo-large.png"
@@ -77,16 +89,6 @@ st.sidebar.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# Router only - No text here!
-pg = st.navigation([
-    st.Page("pages/home_page.py", title="Home", icon=":material/home:"),
-    st.Page("pages/exploration.py", title="Exploration", icon=":material/analytics:"),
-    st.Page("pages/refinery.py", title="Refinery", icon=":material/architecture:"),
-    st.Page("pages/forge.py", title="Forge", icon=":material/model_training:"),
-    st.Page("pages/predict.py", title="Predict", icon=":material/online_prediction:"),
-    st.Page("pages/credits.py", title="Credits", icon=":material/history_edu:"),
-])
 
 if 'df' not in st.session_state:
     st.session_state['df'] = None
