@@ -53,3 +53,18 @@ backgroundColor = "#f0f0ec"
 secondaryBackgroundColor = "#ecebe3"
 headingFontSizes = ["2rem", "1.84rem", "1.6rem"]
 dataframeHeaderBackgroundColor = "#e4e4e0"
+
+[client]
+# This hides the "Running..." and "Stop" buttons entirely
+showErrorDetails = false
+toolbarMode = "hidden"
+
+[server]
+# Disables the 'file watcher' which often triggers the loading pulse
+fileWatcherType = "none"
+# Prevents the "Please wait..." message on startup
+headless = true
+
+[browser]
+# Hides the menu and the "Made with Streamlit" footer globally
+gatherUsageStats = false
