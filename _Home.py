@@ -15,7 +15,7 @@ pg = st.navigation([
 
 # 1. Find the logo path FIRST (Standard Python, not a Streamlit command)
 current_dir = Path(__file__).parent
-logo_path = current_dir / "static" / "luvia-logo-large.png"
+logo_path = current_dir / "static" / "luvia-logo-large-white.png"
 
 st.set_page_config(
     page_title="Luvia ML", 
