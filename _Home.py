@@ -2,6 +2,14 @@ import streamlit as st
 from pathlib import Path
 
 
+# --- ACKEE ANALYTICS INTEGRATION ---
+st.markdown(f"""
+    <script async src="http://64.23.130.154:3000/tracker.js" 
+            data-ackee-server="http://64.23.130.154:3000" 
+            data-ackee-domain-id="380d79d6-0d3d-4e50-bc50-1a99cffb0d48">
+    </script>
+""", unsafe_allow_html=True)
+
 # Router only - No text here!
 pg = st.navigation([
     st.Page("pages/home_page.py", title="Home", icon=":material/home:"),
