@@ -4,8 +4,8 @@ from pathlib import Path
 
 # --- ACKEE ANALYTICS INTEGRATION ---
 st.markdown(f"""
-    <script async src="http://64.23.130.154:3000/tracker.js" 
-            data-ackee-server="http://64.23.130.154:3000" 
+    <script async src="https://analytics.scriptedbysri.dev/tracker.js" 
+            data-ackee-server="https://analytics.scriptedbysri.dev" 
             data-ackee-domain-id="380d79d6-0d3d-4e50-bc50-1a99cffb0d48">
     </script>
 """, unsafe_allow_html=True)
