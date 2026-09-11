@@ -1,0 +1,8 @@
+```text
+3.11.9
+```
+```bash
+git add .python-version
+git commit -m "Add explicit python-version file for Render"
+git push origin main
+```
